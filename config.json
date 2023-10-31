@@ -1,0 +1,76 @@
+{
+    "name": "Twin Family Mapper",
+
+    "namespace": "Stanford\\TwinFamilyMapper",
+
+    "description": "This module attempts to map twin records by email and assigns a unique family ID",
+
+    "documentation": "README.md",
+
+    "framework-version": 14,
+
+    "authors": [
+        {
+            "name": "Andy Martin",
+            "email": "andy123@stanford.edu",
+            "institution": "Stanford Medicine"
+        },
+        {
+            "name": "Ryan Valentine",
+            "email": "rval@stanford.edu",
+            "institution": "Stanford Medicine"
+        }
+    ],
+
+    "permissions": [
+        "redcap_save_record"
+    ],
+
+    "enable-every-page-hooks-on-system-pages": false,
+
+    "enable-ajax-logging": false,
+
+    "auth-ajax-actions": [
+        "TestAction"
+    ],
+
+    "no-auth-ajax-actions": [
+        "TestAction"
+    ],
+
+    "links": {
+        "project": [
+            {
+                "name": "Twin Family Mapper",
+                "icon": "fas fa-cog",
+                "url": "tfm.php"
+            }
+        ],
+        "control-center": [
+
+        ]
+    },
+
+    "no-auth-pages": [
+
+    ],
+
+    "project-settings": [
+
+    ],
+
+    "system-settings": [
+
+    ],
+
+    "crons": [
+
+    ],
+
+    "compatibility": {
+        "php-version-min": "",
+        "php-version-max": "",
+        "redcap-version-min": "",
+        "redcap-version-max": ""
+    }
+}
