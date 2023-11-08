@@ -22,23 +22,17 @@
         }
     ],
 
-    "permissions": [
-        "redcap_save_record"
-    ],
-
     "enable-every-page-hooks-on-system-pages": false,
 
     "enable-ajax-logging": false,
 
     "auth-ajax-actions": [
-        "TestAction"
+        "TestAction",
+        "getRecordTable",
+        "processAllMissingFamilyIds"
     ],
 
-    "no-auth-ajax-actions": [
-        "TestAction"
-    ],
-
-    "links": {
+     "links": {
         "project": [
             {
                 "name": "Twin Family Mapper",
@@ -51,26 +45,57 @@
         ]
     },
 
-    "no-auth-pages": [
-
-    ],
-
     "project-settings": [
-
+        {
+            "key": "instructions",
+            "name": "<h5>Instructions go here</h5>",
+            "type": "descriptive"
+        },
+        {
+            "key": "event-id",
+            "name": "<b>Parameter Event</b><br>Select the Event that contains the fields below",
+            "required": false,
+            "type": "event-list"
+        },
+        {
+            "key": "email-primary-field",
+            "name": "<b>Primary Email Field</b><br>This is the primary email field for the current record",
+            "required": true,
+            "type": "field-list"
+        },
+        {
+            "key": "email-secondary-field",
+            "name": "<b>Secondary (Twin) Email Field</b><br>This is the email field for another record that is part of the same family",
+            "required": true,
+            "type": "field-list"
+        },
+        {
+            "key": "family-id-field",
+            "name": "<b>Family ID Field</b><br>This is field to store the family ID",
+            "required": true,
+            "type": "field-list"
+        },
+        {
+            "key": "family-id-field-prefix",
+            "name": "<b>Family ID Field Prefix</b><br><i>(Optional)</i> If specified, the family ID field will be prefixed, e.g. (FAM- for FAM-123)",
+            "required": false,
+            "type": "text"
+        },
+        {
+            "key": "enable-project-debug-logging",
+            "name": "<b>Enable Debug Logging</b>",
+            "required": false,
+            "type": "checkbox"
+        }
     ],
 
     "system-settings": [
+        {
+            "key": "enable-system-debug-logging",
+            "name": "<b>Enable Debug Logging (system-wide)</b>",
+            "required": false,
+            "type": "checkbox"
+        }
+    ]
 
-    ],
-
-    "crons": [
-
-    ],
-
-    "compatibility": {
-        "php-version-min": "",
-        "php-version-max": "",
-        "redcap-version-min": "",
-        "redcap-version-max": ""
-    }
 }
